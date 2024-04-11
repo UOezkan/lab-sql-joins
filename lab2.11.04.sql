@@ -7,8 +7,8 @@ JOIN film_category fc ON c.category_id = fc.category_id
 JOIN film f ON fc.film_id = f.film_id
 GROUP BY c.name;
 
-# 2 not working Retrieve the store ID, city, and country for each store:
-SELECT s.store_id, a.city, co.country
+-- 2 Retrieve the store ID, city, and country for each store:
+SELECT s.store_id, city, co.country
 FROM store s
 JOIN address a ON s.address_id = a.address_id
 JOIN city ci ON a.city_id = ci.city_id
